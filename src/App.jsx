@@ -4,7 +4,7 @@ import {BiHomeAlt, BiUser} from 'react-icons/bi';
 import {BsClipboard2Data, BsBriefcase, BsChatSquare} from 'react-icons/bs';
 import {Link} from 'react-scroll';
 import { FaQuoteRight,FaGithub ,FaLinkedin ,FaFacebookSquare,
-  FaPhone,FaSearchLocation,FaDev,FaJava,FaReact,FaUserGraduate,FaProjectDiagram,FaLaptopCode,FaPaperclip ,FaDownload  } from "react-icons/fa";
+  FaPhone,FaSearchLocation,FaDev,FaJava,FaReact,FaUserGraduate,FaProjectDiagram,FaLaptopCode,FaPaperclip ,FaDownload,FaLink   } from "react-icons/fa";
 import {Typewriter, Cursor} from 'react-simple-typewriter';
 import {motion, useAnimation, useInView} from 'framer-motion';
 import AOS from 'aos';
@@ -440,6 +440,10 @@ function App() {
               <h1 className='text-center font-bold'>Portfolio</h1>
               <h1 className='font-extrabold text-center'>-</h1>
             </div>
+            <div className='text-center'>
+              <h4>Projet recent</h4>
+            </div>
+            
           </div>
 
           <div className='grid md:grid-cols-8 gap-4'> 
@@ -453,23 +457,32 @@ function App() {
                 </div>
               </div>
               <div className=' md:col-span-6 md:flex px-2'>
-                <div></div>
-                <img data-aos="zoom-in" src="../projet/owayzz.jpg" alt="" className='object-cover  max-h-[380px] w-auto rounded-xl'/>
-                <div className='flex justify-center items-center'>
-                  <div data-aos="zoom-in" className='border-purple-500 h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl flex justify-center p-1'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at nulla rem culpa laboriosam ut, sint tempore animi vitae officia.</p>
+                <img data-aos="zoom-in" src="../projet/owayzz.jpg" alt="" className='object-cover group-hover:scale-125 transition-all duration-500  max-h-[380px] w-auto rounded-xl'/>     
+                <div className='flex justify-center items-center'> 
+                  <div data-aos="zoom-in" className='border-purple-500 min-h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl p-2 text-sm'>
+                    <div>
+                      <h5 className='p-2 text-center'>Owayzz : Projet de vanilla pay</h5>
+                      <p className='text-sm mb-1'><span className='font-bold'>Technologie :</span> <span className='bg-blue-500 p-0.5 rounded'>ReactJs</span> <span className='bg-white p-0.5 text-blue-500 rounded'>Tailwind css</span>  <span className='flex items-center font-extralight'><FaLink /><a href="https://owayzz.vercel.app/"> Lien: owayzz.vercel.app</a> </span> </p>
+                      <span className='bg-gray-700 text-white p-0.5 rounded cursor-pointer'><a href="https://github.com/TendryMahery/Owayzz">github</a> </span>
+                    </div>
+                    <p>Ce projet consiste en la refonte du site Owayzz, mettant en avant l'équipe de Vanilla Pay. L’objectif était de moderniser l’interface et d'améliorer l’expérience utilisateur tout en reflétant l’esprit collaboratif et l’expertise de l’équipe. J'ai intégré un design attrayant et fonctionnel, facilitant la navigation et la présentation des membres de l'équipe. Ce travail illustre ma capacité à allier esthétique et ergonomie pour valoriser une marque et ses valeurs.</p>
                   </div>
                 </div>
               </div>
-
+              
               <div className='md:col-span-2 '>
                 
               </div>
               <div className=' md:col-span-6 md:flex px-2'>
                 <img data-aos="zoom-in" src="../projet/portfolio.jpg" alt="" className='object-cover max-h-[380px] w-auto  rounded-xl'/>
                 <div className='flex justify-center items-center'>
-                  <div data-aos="zoom-in" className='h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl flex justify-center p-1'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at nulla rem culpa laboriosam ut, sint tempore animi vitae officia.</p>
+                  <div data-aos="zoom-in" className='min-h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl  p-2 text-sm'>
+                    <div>
+                        <h5 className='p-2 text-center'>Prototype portfolio front-end</h5>
+                        <p className='text-sm'><span className='font-bold'>Technologie :</span> <span className='bg-blue-500 p-0.5 rounded'>ReactJs</span> <span className='bg-white p-0.5 text-blue-500 rounded'>Tailwind css</span> <span className='flex items-center font-extralight'><FaLink /><a href="https://prototype-portfolio.vercel.app/"> Lien: prototype-portfolio.vercel.app/</a> </span></p>
+                        <span className='bg-gray-700 text-white p-0.5 rounded cursor-pointer'><a href="https://github.com/TendryMahery/prototype-portfolio">github</a> </span>
+                    </div>
+                    <p>Ce projet présente un prototype de portfolio qui met en lumière mes compétences en design front-end. Le design est pensé pour refléter ma créativité tout en mettant en avant mes réalisations de manière claire et accessible</p>
                   </div>
                 </div>
               </div>
@@ -480,8 +493,13 @@ function App() {
                 <div className=' md:col-span-6 md:flex px-2'>
                   <img data-aos="zoom-in" src="../projet/e-commerce.jpg" alt="" className='object-cover max-h-[380px] w-auto rounded-xl'/>
                   <div className='flex justify-center items-center'>
-                    <div data-aos="zoom-in" className='h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl flex justify-center p-1'>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at nulla rem culpa laboriosam ut, sint tempore animi vitae officia.</p>
+                    <div data-aos="zoom-in" className='min-h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl p-2 text-sm'>
+                      <div>
+                        <h5 className='p-2 text-center'>E-commerce projet perso</h5>
+                        <p className='text-sm'><span className='font-bold'>Technologie :</span> <span className='bg-gray-800 p-0.5 rounded text-white'>Symfony</span> <span className='bg-white p-0.5 text-blue-500 rounded'>Tailwind css</span> </p>
+                         <span className='bg-gray-700 text-white p-0.5 rounded cursor-pointer'><a href="https://github.com/TendryMahery/e-commerceSymfony">github</a> </span>
+                      </div>
+                      <p>Ce projet e-commerce est conçu pour offrir une expérience utilisateur fluide et intuitive. Il inclut des fonctionnalités robustes pour gérer les utilisateurs et les produits, garantissant une administration efficace. La structure de la base de données est organisée selon une méthode MERISE, facilitant ainsi la gestion des données et l'évolutivité de l'application. Ce projet illustre ma capacité à créer des solutions complètes et fonctionnelles dans le domaine du commerce en ligne.</p>
                     </div>
                   </div>
                 </div>
@@ -491,8 +509,13 @@ function App() {
                 <div className=' md:col-span-6 md:flex px-2'>
                   <img data-aos="zoom-in" src="../projet/conge.jpg" alt="" className='object-cover max-h-[380px] w-auto rounded-xl'/>
                   <div className='flex justify-center items-center'>
-                    <div data-aos="zoom-in" className='h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl flex justify-center p-1'>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at nulla rem culpa laboriosam ut, sint tempore animi vitae officia.</p>
+                    <div data-aos="zoom-in" className='min-h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl p-2 text-sm'>
+                      <div>
+                        <h5 className='p-2 text-center'>Gestion de chambre</h5>
+                        <p className='text-sm'><span className='font-bold'>Technologie :</span> <span className='bg-gray-800 p-0.5 rounded text-white'>Symfony</span> <span className='bg-white p-0.5 text-blue-500 rounded'>Tailwind css</span> </p>
+                        <span className='bg-gray-700 text-white p-0.5 rounded cursor-pointer'><a href="https://github.com/TendryMahery/chambre_hotel_symfony">github</a> </span>
+                      </div>
+                      <p>Ce projet de gestion des chambres d'hôtel permet une administration efficace des réservations et des occupants. Il inclut des fonctionnalités pour gérer les chambres, ajouter des personnes dans chaque chambre, ainsi que rechercher des occupants rapidement. L'interface intuitive facilite la navigation et le suivi des réservations, garantissant une expérience fluide tant pour le personnel que pour les clients. Ce projet met en avant mes compétences en développement d'applications dédiées à l'hôtellerie, visant à améliorer la gestion opérationnelle.</p>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import {BiHomeAlt, BiUser} from 'react-icons/bi';
 import {BsClipboard2Data, BsBriefcase, BsChatSquare} from 'react-icons/bs';
@@ -14,6 +14,10 @@ import 'aos/dist/aos.css'
 import { MdSettings ,MdNightlight ,MdOutlineLightMode} from "react-icons/md";
 const cvFile = '../cv.pdf'
 function App() {
+  const [darkMode, setDarkMode] = useState(false)
+  const mode = () => {
+    alert("mode")
+  }
   const container = useRef(null)
   const inView = useInView(container, {once:true})
   const mainControl = useAnimation();
@@ -37,10 +41,11 @@ function App() {
     },
 
   }
+
   return (
-      <div className=''> 
+      <div className={darkMode ? 'dark' : ''}> 
         {/* banner*/}
-        <section id='home' className='bg-gray-800 min-h-screen pb-4 w-full border-b border-white'>
+        <section id='home' className='bg-gray-800 dark:bg-gray-300  min-h-screen pb-4 w-full border-b border-white'>
           <div className='fixed top-0 w-full z-50'>
             <div className='mx-auto'>
               <div className='w-full bg-black/10 h-[60px]
@@ -57,16 +62,16 @@ function App() {
                   </div>
                 </div>
                 <div className='flex items-center gap-4'>
-                  <div>
-                    <MdOutlineLightMode size={25}/>
-                    {/* <MdNightlight /> */}
+                  <div className='cursor-pointer' onClick={() => setDarkMode(!darkMode)}>
+                    {darkMode ? <MdOutlineLightMode size={25} />
+                    : <MdNightlight size={25} />}
                   </div>
-                  <a href={cvFile}><button className='p-1 rounded border border-white flex items-center gap-2'><FaDownload size={10}/> <span>cv</span></button></a>
+                  <a href={cvFile}><button className='p-1 rounded border border-white  flex items-center gap-2'><FaDownload size={10}/> <span>cv</span></button></a>
                 </div>
               </div>
             </div>
           </div>
-          <div className='text-white'>
+          <div className='text-white dark:text-gray-800'>
             <div className='banner pt-20'>
               <div className='px-1 sm:px-40'>
                 {/**Anarana */}
@@ -79,7 +84,7 @@ function App() {
                     <div>
                       <p className='font-secondary text-sm mb-3 text-center'>je m'appelle</p>
                     </div>
-                    <span className='text-orange-500 tetx-sm bg-white p-1 rounded-full font-bold'>Mr</span>
+                    <span className='text-orange-500 tetx-sm bg-white dark:bg-gray-700 p-1 rounded-full font-bold'>Mr</span>
                     <motion.h2 variants={variant1} className='text-2xl mx-auto sm:text-6xl font-bold sm:mb-4 mt-4'> RAFANOMEZANA</motion.h2>
                     <motion.h3 variants={variant1} className='sm:text-6xl'>
                       <span className='font-bold text-orange-500'>T</span>
@@ -90,14 +95,16 @@ function App() {
                   <div className=''>
                     <div className='flex flex-row'>
                       <div>
-                          <motion.h5 variants={variant1} className='sm:text-4xl mb-4'>Développeur  <span className='text-stone-400'><Typewriter 
-                          words={['php(Symfony)','java(Spring-boot)','javascript(ReactJs)']}
+                          <motion.h5 variants={variant1} className='sm:text-4xl mb-4'>Développeur  <span className='text-stone-400 dark:text-stone-800'><Typewriter 
+                          words={['php(Symfony)','php(Laravel)','javascript(ReactJs)']}
                           loop={Infinity}
                           /></span><span><Cursor/></span></motion.h5>
                           
-                          <motion.div variants={variant1} className='bg-gray-900 p-4 border rounded-xl'>
-                            <FaQuoteRight/>
-                            <h5 className='mt-4'>Je suis un développeur junior enthousiaste et déterminé.
+                          <motion.div variants={variant1} className='bg-gray-900 p-4 border dark:border-gray-800 rounded-xl'>
+                            <div className='dark:text-gray-300'>
+                              <FaQuoteRight/>
+                            </div>
+                            <h5 className='mt-4 dark:text-gray-300'>Je suis un développeur junior enthousiaste et déterminé.
                             </h5>
                           </motion.div>
                           {/**icons */}
@@ -123,7 +130,7 @@ function App() {
                               <div>
                                 <button className='bg-purple-600 px-10 py-3 rounded-xl border flex items-center gap-2 hover:bg-gray-800 transition-all duration-100'>
                                   <FaSearchLocation/> 
-                                  <span>Recrutez-mo</span>
+                                  <span>Recrutez-moi</span>
                                 </button>
                               </div>
                           </motion.div>
@@ -175,7 +182,8 @@ function App() {
           </div>
         </section>
         {/* about*/}
-        <section id='about' className='text-white about bg-gray-800 min-h-screen relative border-b'>
+
+        <section id='about' className='text-white about bg-gray-800 dark:bg-gray-600  min-h-screen relative border-b'>
         {/* <div className='circle absolute top-[150px] left-[10%] bg-purple-500 sm:h-96 sm:w-96 h-34 w-34 rounded-full'></div> */}
         {/* <div className='circle absolute top-[300px] left-[33%] bg-orange-500 h-32 w-32 rounded-full'></div> */}
         {/* <div className='circle absolute top-[300px] hidden sm:block right-[33%] bg-purple-500 h-32 w-32 rounded-full'></div> */}
@@ -269,19 +277,19 @@ function App() {
           </div>
         </section>
         {/* service*/}
-        <section id='service' className='service border-b border-white text-white bg-gray-800 relative min-h-screen w-full'>
+        <section id='service' className='service border-b border-white  text-white bg-gray-800 dark:bg-gray-300 relative min-h-screen w-full'>
           <div className='p-5 '>
             <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='pt-10'>
-              <h1 className='text-center font-bold'>Mes services</h1>
-              <h1 className='font-extrabold text-center'>-</h1>
+              <h1 className='text-center font-bold dark:text-gray-800'>Mes services</h1>
+              <h1 className='font-extrabold text-center dark:text-gray-800'>-</h1>
             </div>
             <div className='text-center md:mx-80'>
-              <p data-aos="zoom-in-down" className='font-semibold text-sm text-gray-400'>En tant que développeur web junior, je propose une gamme de services conçus pour aider les entreprises et les particuliers à atteindre leurs objectifs numériques. Voici un aperçu des services que je propose :</p>
+              <p data-aos="zoom-in-down" className='font-semibold text-sm text-gray-400 dark:text-gray-800'>En tant que développeur web junior, je propose une gamme de services conçus pour aider les entreprises et les particuliers à atteindre leurs objectifs numériques. Voici un aperçu des services que je propose :</p>
               
             </div> <br />
             <div className='mx-auto md:mx-72 sm:mx-20 grid gap-3 md:grid-cols-12'>
               <div data-aos="zoom-in-down" className='sary sy soratra col-span-6'>
-                <div className='h-32 shadow-2xl bg-purple-600/20 rounded-xl'>
+                <div className='h-32 shadow-2xl bg-purple-600/20 dark:bg-purple-600 rounded-xl'>
                   <div>
                     <div className='flex justify-between p-4'>
                       <h6 className='bg-orange-500 h-10 w-10 rounded-full flex justify-center items-center'><CgWebsite/></h6>
@@ -296,7 +304,7 @@ function App() {
                 </div>
               </div>
               <div data-aos="zoom-in-down" className='sary sy soratra col-span-6'>
-                <div className='h-32 shadow-2xl w-full bg-purple-600/20 rounded-xl'>
+                <div className='h-32 shadow-2xl w-full bg-purple-600/20 dark:bg-purple-600 rounded-xl'>
                 <div>
                     <div className='flex justify-between p-4 text-center'>
                       <h6 className='bg-orange-500 h-10 w-10 rounded-full flex justify-center items-center'> <MdSettings/> </h6>
@@ -309,7 +317,7 @@ function App() {
                 </div>
               </div>
               <div data-aos="zoom-in-up" className='sary sy soratra col-span-6'>
-                <div className='h-32 shadow-2xl w-full bg-purple-600/20 rounded-xl'>
+                <div className='h-32 shadow-2xl w-full bg-purple-600/20 dark:bg-purple-600 rounded-xl'>
                 <div>
                     <div className='flex justify-between p-4'>
                       <h6 className='bg-orange-500 h-10 w-10 rounded-full flex justify-center items-center'><FaProjectDiagram/> </h6>
@@ -323,7 +331,7 @@ function App() {
               </div>
              
               <div data-aos="zoom-in-up" className='sary sy soratra col-span-6'>
-                <div className='h-32 shadow-2xl w-full bg-purple-600/20 rounded-xl'>
+                <div className='h-32 shadow-2xl w-full bg-purple-600/20 dark:bg-purple-600 rounded-xl'>
                 <div>
                     <div className='flex justify-between p-4'>
                       <h6 className='bg-orange-500 h-10 w-10 rounded-full flex justify-center items-center'><FaLaptopCode /></h6>
@@ -340,11 +348,11 @@ function App() {
           </div>
         </section>
         {/* competence*/}
-        <section id='competence' className='service border-b border-white text-white bg-gray-800 relative min-h-screen w-full'>
+        <section id='competence' className='service border-b border-white text-white bg-gray-800 dark:bg-gray-300 relative min-h-screen w-full'>
           <div className='p-5 '>
             <div data-aos="zoom-in-up" className='pt-10'>
-              <h1 className='text-center font-bold'>Mes compétences</h1>
-              <h1 className='font-extrabold text-center'>-</h1>
+              <h1 className='text-center font-bold dark:text-gray-800'>Mes compétences</h1>
+              <h1 className='font-extrabold text-center dark:text-gray-800'>-</h1>
             </div>
             <div data-aos="zoom-in-up" className='mx-auto md:mx-32 grid md:grid-cols-12 gap-4 p-4'>
               <div className='col-span-6'>
@@ -434,24 +442,24 @@ function App() {
           </div>
         </section>
         {/* work*/}
-        <section id='work' className='service border-b border-white text-white bg-gray-800 relative min-h-screen w-full'>
+        <section id='work' className='service border-b pb-8 border-white text-white bg-gray-800 dark:bg-gray-300 relative min-h-screen w-full'>
           <div className='p-5 '>
             <div className='pt-10' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-              <h1 className='text-center font-bold'>Portfolio</h1>
-              <h1 className='font-extrabold text-center'>-</h1>
+              <h1 className='text-center font-bold dark:text-gray-800'>Portfolio</h1>
+              <h1 className='font-extrabold text-center dark:text-gray-800'>-</h1>
             </div>
             <div className='text-center'>
-              <h4>Projet recent</h4>
+              <h4 className='text-gray-800'>Projets recent</h4>
             </div>
             
           </div>
 
           <div className='grid md:grid-cols-8 gap-4'> 
-              <div data-aos="fade-down" className='md:col-span-2 border border-stone-50/30 rounded-xl h-auto w-auto md:max-w-60 md:mx-10'>
+              <div data-aos="fade-down" className='md:col-span-2 border border-stone-50/30 dark:border-gray-700 rounded-xl h-auto w-auto md:max-w-60 md:mx-10'>
                 <div className='flex justify-center mt-2'>
                   <div className='h-8 w-8 bg-orange-500 rounded-full flex justify-center items-center'><FaPaperclip /></div>
                 </div>
-                  <p className='text-sm p-4'>Je suis particulièrement attiré par la conception d'interfaces utilisateur, le développement d'applications web interactives, l'optimisation des performances. Mon objectif est de créer des solutions qui non seulement répondent aux besoins des utilisateurs, mais les surpassent en termes de fonctionnalité et d'expérience.</p>
+                  <p className='text-sm p-4 dark:text-gray-800'>Je suis particulièrement attiré par la conception d'interfaces utilisateur, le développement d'applications web interactives, l'optimisation des performances. Mon objectif est de créer des solutions qui non seulement répondent aux besoins des utilisateurs, mais les surpassent en termes de fonctionnalité et d'expérience.</p>
                 <div className='flex justify-center'>
                   <button className='bg-purple-500 px-6 py-2 rounded-xl text-sm hover:scale-100 mb-2'>bouton</button>
                 </div>
@@ -507,7 +515,7 @@ function App() {
                 
                 </div>
                 <div className=' md:col-span-6 md:flex px-2'>
-                  <img data-aos="zoom-in" src="../projet/conge.jpg" alt="" className='object-cover max-h-[380px] w-auto rounded-xl'/>
+                  <img data-aos="zoom-in" src="../projet/hotel.jpg" alt="" className='object-cover max-h-[380px] w-auto rounded-xl'/>
                   <div className='flex justify-center items-center'>
                     <div data-aos="zoom-in" className='min-h-40 -mt-10 w-72 md:mt-0 md:w-auto bg-orange-500 md:-ml-40 rounded-xl p-2 text-sm'>
                       <div>
@@ -522,17 +530,17 @@ function App() {
           </div>
         </section>
         {/* contact*/}
-        <section id='contact' className='service border-b border-white text-white bg-gray-800 relative min-h-screen w-full'>
+        <section id='contact' className='service border-b border-white text-white bg-gray-800 dark:bg-gray-400 relative min-h-screen w-full'>
           <div className='p-5 '>
             <div className='pt-10' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-              <h1 className='text-center font-bold'>Contact</h1>
-              <h1 className='font-extrabold text-center'>-</h1>
+              <h1 className='text-center font-bold dark:text-gray-800'>Contact</h1>
+              <h1 className='font-extrabold text-center dark:text-gray-800'>-</h1>
             </div>
 
             <div>
               <div className=''>
                   <div className='md:mx-80 mb-8 mx-auto'>
-                    <p className='text-sm'>Si vous êtes intéressé par l’un de ces services ou si vous avez un projet spécifique en tête, n’hésitez pas à me contacter pour discuter de vos besoins. Je suis passionné par le développement web et prêt à apporter mon expertise pour vous aider à réaliser vos objectifs numériques.</p>
+                    <p className='text-sm dark:text-gray-800'>Si vous êtes intéressé par l’un de ces services ou si vous avez un projet spécifique en tête, n’hésitez pas à me contacter pour discuter de vos besoins. Je suis passionné par le développement web et prêt à apporter mon expertise pour vous aider à réaliser vos objectifs numériques.</p>
                   </div>
               </div>
               <div className='grid md:grid-cols-12 gap-4 md:mx-52 mx-auto'>
@@ -585,7 +593,7 @@ function App() {
             </div>
 
             <div className='footer h-32 mt-8 mb-8 flex justify-center'>
-              <footer class="bg-gray-800 text-white py-4 text-center">
+              <footer class="bg-gray-800 dark:bg-gray-400 text-white dark:text-gray-800 py-4 text-center">
                 <div class="mb-2">
                     <p class="m-0">
                         Contactez-moi : 

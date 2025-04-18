@@ -457,7 +457,7 @@ function App() {
 
                 <div className="flex justify-center">
                   <div className="">
-                    <div className=" grid grid-cols-2 gap-4">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-4 space-y-2">
                       <div data-aos="zoom-in" className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400">
                         <div className="card-body">
                           <h2 className="card-title">

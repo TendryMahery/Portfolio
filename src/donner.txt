@@ -1,0 +1,129 @@
+  <div className="grid md:grid-cols-12  gap-2">
+                <div
+                  data-aos="zoom-in"
+                  className="col-span-6 bg-white/10 border border-stone-50/30 rounded-xl  w-full backdrop-blur-xl min-h-[388px]"
+                >
+      
+                  <div className="m-auto grid grid-cols-8 gap-2 p-6 place-items-center">
+                    <div className="col-span-1 h-6 w-6 md:h-16 md:w-16 bg-orange-500 rounded-full flex justify-center items-center">
+                      <div className="">
+                        <FaUserGraduate size={35} />
+                      </div>
+                    </div>
+                    <div className="text-stone-50/30 w-full col-span-7 ">
+                      <hr className="" />
+                    </div>
+                  </div>
+                  <motion.div className="md:px-6 px-2">
+                    <div className="">
+                      <div className="">
+                        <h1 className="font-bold mb-2">Expériences</h1>
+                        <div className="mb-2">
+                          <div className="flex md:ml-5">
+                            <img
+                              src="../image/animation.gif"
+                              alt=""
+                              className="w-8 h-8 object-cover"
+                            />
+                            <p className="font-bold">Juin 2024-Aout 2024</p>
+                          </div>
+                          <p className="md:ml-12 text-sm text-gray-200">
+                            -Stagiaire développeur No Code chez Rantsa
+                            Communication (Flutterflow, Hasura, Xano)
+                          </p>
+                        </div>
+                        <div className="mb-2">
+                          <div className="flex md:ml-5">
+                            <img
+                              src="../image/animation.gif"
+                              alt=""
+                              className="w-8 h-8 object-cover"
+                            />
+                            <p className="font-bold">Avril 2024-Juin 2024</p>
+                          </div>
+                          <p className="md:ml-12 text-sm text-gray-200">
+                            -Stagiaire développeur web fullstack chez Eqima
+                            Solution (Spring Boot)
+                          </p>
+                        </div>
+                        <div className="mb-2">
+                          <div className="flex md:ml-5">
+                            <img
+                              src="../image/animation.gif"
+                              alt=""
+                              className="w-8 h-8 object-cover"
+                            />
+                            <p className="font-bold">Mars 2021-Aout 2021</p>
+                          </div>
+                          <p className="md:ml-12 text-sm text-gray-200">
+                            -Stagiaire développeur et technicien réseau au sein
+                            du Ministère de l'Agriculture, de l'Élevage et de la
+                            Pêche (Django){" "}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+                <div
+                  data-aos="zoom-in"
+                  className="col-span-6 bg-white/10 border border-stone-50/30 rounded-xl  w-full backdrop-blur-xl min-h-[388px]"
+                >
+                  <div className="md:p-6 p-2">
+                    <div className="flex justify-between items-center">
+                      <div className="flex justify-center gap-2 items-center">
+                        <img
+                          src="../image/brain.png"
+                          alt=""
+                          className="w-8 h-8 object-cover"
+                        />
+                        <h2 className="font-bold">Educations</h2>
+                      </div>
+                      {/* <hr className='w-[300px]'/>
+                        <div className='md:w-16 w-8 h-8 md:h-16 bg-purple-500 rounded-full'></div> */}
+                        
+                    </div>
+                    <h4 className="font-bold">
+                      Université 2018-2023{" "}
+                      <span className="text-sm">
+                        (Institut Supérieur Polytechnique de Madagascar)
+                      </span>
+                    </h4>
+                    <li>Master II 2022-2023</li>
+                    <p className="md:ml-12 text-sm text-gray-200">
+                      Diplôme de Master II en cours dans le parcours
+                      Électronique, Systèmes Informatiques et Intelligence
+                      Artificielle (ESIIA)
+                    </p>
+                    <li>Master I 2021-2022</li>
+                    <p className="md:ml-12 text-sm text-gray-200">
+                      ✔Études supérieures en 4e année à l'Institut Supérieur
+                      Polytechnique de Madagascar
+                    </p>
+                    <li>Licence 2018-2020</li>
+                    <p className="md:ml-12 text-sm text-gray-200">
+                      ✔Diplôme de licence dans le parcours Électronique,
+                      Systèmes Informatiques et Intelligence Artificielle
+                      (ESIIA)
+                    </p>
+                    <div>
+                      <h4 className="font-bold">
+                        Lycée 2014-2016{" "}
+                        <span className="text-sm">
+                          (Lycée Technique Professionnel d'Alarobia)
+                        </span>
+                      </h4>
+                      <li>Diplôme de BACC</li>
+                      <p className="md:ml-12 text-sm text-gray-200">
+                        ✔Diplôme de baccalauréat technique industriel,
+                        spécialité Électronique
+                      </p>
+                      <li>Diplôme de BEP</li>
+                      <p className="md:ml-12 text-sm text-gray-200">
+                        ✔Diplôme de Brevet d'Études Professionnelles en
+                        Télécommunication, spécialité Électronique
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>

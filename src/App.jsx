@@ -862,7 +862,7 @@ function App() {
           <div className=" md:col-span-6 md:flex px-2">
             <img
               data-aos="zoom-in"
-              src="../projet/poem.png"
+              src="../projet/poem.jpg"
               alt=""
               className="object-cover group-hover:scale-125 transition-all duration-500  max-h-[380px] w-auto rounded-xl"
             />
@@ -908,7 +908,7 @@ function App() {
           <div className=" md:col-span-6 md:flex px-2">
             <img
               data-aos="zoom-in"
-              src="../projet/owayzz.png"
+              src="../projet/owayzz.jpg"
               alt=""
               className="object-cover max-h-[380px] w-auto  rounded-xl"
             />

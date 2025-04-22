@@ -336,7 +336,10 @@ function App() {
                   <div className="w-16 mx-auto border-t-2 border-orange-600 mt-2"></div>
                 </div>
               </div>
-              <div className="flex justify-center mb-2   rounded-full" data-aos="fade-up">
+              <div
+                className="flex justify-center mb-2   rounded-full"
+                data-aos="fade-up"
+              >
                 <div className="bg-purple-600 p-2 dark:text-white rounded-full">
                   <FaUserGraduate size={35} />
                 </div>
@@ -359,7 +362,10 @@ function App() {
                         />
                       </svg>
                     </div>
-                    <div className="timeline-start mb-2 md:text-end" data-aos="fade-right">
+                    <div
+                      className="timeline-start mb-2 md:text-end"
+                      data-aos="fade-right"
+                    >
                       <time className="font-mono italic">2022-2023</time>
                       <div className="text-lg font-black">Master II</div>
                       Diplôme de Master II en cours dans le parcours
@@ -408,7 +414,10 @@ function App() {
                         />
                       </svg>
                     </div>
-                    <div className="timeline-start mb-2 md:text-end" data-aos="fade-right">
+                    <div
+                      className="timeline-start mb-2 md:text-end"
+                      data-aos="fade-right"
+                    >
                       <time className="font-mono italic">2018-2020</time>
                       <div className="text-lg font-black">Licence</div>
                       Diplôme de licence dans le parcours Électronique, Systèmes
@@ -458,7 +467,10 @@ function App() {
                 <div className="flex justify-center">
                   <div className="">
                     <div className="lg:grid lg:grid-cols-2 lg:gap-4 space-y-2 sm:space-y-0">
-                      <div data-aos="zoom-in" className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400">
+                      <div
+                        data-aos="zoom-in"
+                        className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400"
+                      >
                         <div className="card-body">
                           <h2 className="card-title">
                             💻Février 2025 - Aujourd’hui
@@ -470,7 +482,10 @@ function App() {
                           </p>
                         </div>
                       </div>
-                      <div data-aos="zoom-in-up" className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400">
+                      <div
+                        data-aos="zoom-in-up"
+                        className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400"
+                      >
                         <div className="card-body">
                           <h2 className="card-title">💻Juin 2024-Aout 2024</h2>
                           <p>
@@ -482,7 +497,10 @@ function App() {
                           </p>
                         </div>
                       </div>
-                      <div data-aos="zoom-in" className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400">
+                      <div
+                        data-aos="zoom-in"
+                        className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600   shadow-xl max-w-sm border border-gray-400"
+                      >
                         <div className="card-body">
                           <h2 className="card-title">💻Avril 2024-Juin 2024</h2>
                           <p>
@@ -494,7 +512,10 @@ function App() {
                           </p>
                         </div>
                       </div>
-                      <div data-aos="zoom-in-up" className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600  shadow-xl max-w-sm border border-gray-400">
+                      <div
+                        data-aos="zoom-in-up"
+                        className="col-span-1 card card-side dark:bg-white bg-gray-900 hover:bg-gray-600  shadow-xl max-w-sm border border-gray-400"
+                      >
                         <div className="card-body">
                           <h2 className="card-title">💻Mars 2021-Aout 2021</h2>
                           <p>
@@ -632,6 +653,40 @@ function App() {
             </h1>
             <div className="w-16 mx-auto border-t-2 border-orange-600 mt-2"></div>
           </div>
+
+          <div className="dark:text-black">
+            <div className="flex justify-center">
+              <div className="mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-16 mx-auto border-t-2 border-purple-600 mt-2"></div>
+                  <h4 className="text-white dark:text-black">
+                    Mes bonnes pratiques en développement web
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div className="md:flex justify-center gap-4 space-y-2 md:space-y-0">
+              <div className="bg-black hover:border-orange-500 dark:bg-white max-w-sm border border-gray-400 rounded-tr-3xl rounded-bl-3xl">
+                <p className="font-bold text-center">
+                  🏗️ Back-end Architecture SOLID
+                </p>
+                <p className="p-2">
+                  _Je conçois mon code en respectant les 5
+                  principes SOLID pour garantir la maintenabilité.
+                </p>
+              </div>
+              <div className="bg-black hover:border-orange-500 dark:bg-white max-w-sm border border-gray-400 rounded-tl-3xl rounded-br-3xl">
+                <p className="font-bold text-center">
+                  🎨 Front-end Atomic Design
+                </p>
+                <p className="p-2">
+                  _Je structure mes interfaces selon la méthode Atomic Design
+                  pour des composants réutilisables et scalables.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div
             data-aos="zoom-in-up"
             className="mx-auto md:mx-32 grid md:grid-cols-12 gap-4 p-4"
@@ -672,16 +727,16 @@ function App() {
 
           <div>
             <div>
-              <div className="mx-auto md:mx-32 grid md:grid-cols-12 gap-4">
+              <div className="mx-auto md:mx-32 grid lg:grid-cols-12 gap-4 h-full">
                 <div
-                  className="col-span-6 group overflow-hidden"
+                  className="col-span-6 max-h-[355px] group overflow-hidden"
                   data-aos="zoom-in"
                 >
-                  <div className="group-hover:bg-black/70 absolute h-full w-full z-40 transition-all duration-500"></div>
+                  <div className="group-hover:bg-black/70 absolute h-auto w-full z-40 transition-all duration-500"></div>
                   <img
                     src="../image/mac.jpg"
                     alt=""
-                    className="rounded-xl h-auto object-cover shadow-2xl group-hover:scale-125 transition-all duration-500"
+                    className="rounded-xl h-full object-cover shadow-2xl group-hover:scale-125 transition-all duration-500"
                   />
                 </div>
                 <div className="competence col-span-6">
@@ -895,11 +950,12 @@ function App() {
                   </span>
                 </div>
                 <p>
-                  Il s’agit d’un site web dynamique et administrable, permettant à l’équipe de gérer facilement
-                  les contenus sans connaissances techniques. L’interface
-                  d’administration sécurisée offre un accès complet à la gestion
-                  des sections clés du site : services, actualités, équipe,
-                  portfolio, formulaires de contact, et bien plus encore.
+                  Il s’agit d’un site web dynamique et administrable, permettant
+                  à l’équipe de gérer facilement les contenus sans connaissances
+                  techniques. L’interface d’administration sécurisée offre un
+                  accès complet à la gestion des sections clés du site :
+                  services, actualités, équipe, portfolio, formulaires de
+                  contact, et bien plus encore.
                 </p>
               </div>
             </div>

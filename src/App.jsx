@@ -28,7 +28,7 @@ import { CgWebsite } from "react-icons/cg";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import "aos/dist/aos.css";
 import { MdSettings, MdNightlight, MdOutlineLightMode } from "react-icons/md";
-const cvFile = "../cv.pdf";
+const cvFile = "../cv_tendry.pdf";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const mode = () => {
